@@ -17,7 +17,7 @@ Angular: 13.0.3
 ... platform-browser, platform-browser-dynamic, router  
   
 Package                         Version  
----------------------------------------------------------  
+  
 @angular-devkit/architect       0.1300.4  
 @angular-devkit/build-angular   13.0.4  
 @angular-devkit/core            13.0.4  
