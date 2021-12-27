@@ -4,7 +4,24 @@
 
 ### 49. Creating The Components
 
-#### Error when attempting to create header.component.ts and header.component.html
+#### Components: Recipe List, Recipe Detail and Recipe Detail
+
+`ng g c recipes/recipe-list --skip-tests true`
+This created this Component inside of the recipes folder `recipes/recipie-list`
+`ng g c recipes/recipe-detail --skip-tests true`
+`ng g c recipes/recipe-list/recipe-detail --skip-tests true`
+
+#### Component: Recipes 
+
+Created via `ng g c recipes --skipTests true`.  Note that this is shorthand for ng generate component recipes --skipTests true (older syntax has the switch `--spec false`).  Received this helpful message when running this command...
+
+`Support for camel case arguments has been deprecated and will be removed in a future major version. Use '--skip-tests' instead of '--skipTests'.`
+
+#### Component: Header
+
+Created manually
+
+Encountered an error when attempting to create header.component.ts and header.component.html...(TLDR, was a syntax error)
 
 ##### Stuck At 
 
@@ -31,28 +48,28 @@ Error: src/app/header/header.component.ts:3:13 - error TS1146: Declaration expec
 
 changed...
   
-@Component(){  
+```@Component(){  
   selector: 'app-header',  
   templateUrl: './header.component.html'  
-}  
+}  ```
   
 ...to...  
   
-@Component({  
+```@Component({  
   selector: 'app-header',  
   templateUrl: './header.component.html'  
-})  
+})  ```
 
 ## Getting Things Rolling
 
 ### Generate This Project
 
-ng new angular-complete-guide-course-project —no-strict  
-npm install —save-boostrap@3  
+```ng new angular-complete-guide-course-project —no-strict  
+npm install —save-boostrap@3  ```
 
 ### ng --version
 
-Angular CLI: 13.0.4  
+```Angular CLI: 13.0.4  
 Node: 16.13.0  
 Package Manager: npm 8.1.3  
 OS: linux arm64  
@@ -70,4 +87,4 @@ Package                         Version
 @angular/cli                    13.0.4  
 @schematics/angular             13.0.4  
 rxjs                            7.4.0  
-typescript                      4.4.4  
+typescript                      4.4.4  ```
