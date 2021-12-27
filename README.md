@@ -1,5 +1,7 @@
 # Course Project
 
+https://github.com/christophervigliotti/
+
 ## Notes By Chapter
 
 ### 49. Creating The Components
@@ -64,7 +66,8 @@ changed...
 ### Generate This Project
 
 ```ng new angular-complete-guide-course-project —no-strict  
-npm install —save-boostrap@3```  
+npm install —save-boostrap@3
+```
 
 ### ng --version
 
@@ -86,4 +89,5 @@ Package                         Version
 @angular/cli                    13.0.4  
 @schematics/angular             13.0.4  
 rxjs                            7.4.0  
-typescript                      4.4.4```  
+typescript                      4.4.4
+```
