@@ -6,6 +6,12 @@
 
 #### Error when attempting to create header.component.ts and header.component.html
 
+##### Stuck At 
+
+https://github.com/christophervigliotti/angular-complete-guide-course-project/tree/913158e94aa811ff0d570335f4f57797070d883e
+
+##### Error Message
+
 Error: src/app/app.module.ts:10:5 - error NG6001: The class 'HeaderComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.  
   
 10     HeaderComponent  
@@ -19,7 +25,23 @@ Error: src/app/app.module.ts:10:5 - error NG6001: The class 'HeaderComponent' is
   
 Error: src/app/header/header.component.ts:3:13 - error TS1146: Declaration expected.  
   
-3 @Component(){              
+3 @Component(){    
+
+##### Solution
+
+changed...
+
+@Component(){
+  selector: 'app-header',
+  templateUrl: './header.component.html'
+}
+
+...to...
+
+@Component({
+  selector: 'app-header',
+  templateUrl: './header.component.html'
+})
 
 
 ## Getting Things Rolling
