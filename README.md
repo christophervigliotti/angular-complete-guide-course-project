@@ -1,10 +1,10 @@
 # Course Project
 
-## Notes 
+## Notes By Chapter
 
 ### 49. Creating The Components
 
-#### Creating header.component.ts, .html
+#### Error when attempting to create header.component.ts and header.component.html
 
 Error: src/app/app.module.ts:10:5 - error NG6001: The class 'HeaderComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.  
   
