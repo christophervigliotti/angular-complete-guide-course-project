@@ -1,11 +1,35 @@
 # Course Project
 
-## New Project
+## Notes 
+
+### 49. Creating The Components
+
+#### Creating header.component.ts, .html
+
+Error: src/app/app.module.ts:10:5 - error NG6001: The class 'HeaderComponent' is listed in the declarations of the NgModule 'AppModule', but is not a directive, a component, or a pipe. Either remove it from the NgModule's declarations, or add an appropriate Angular decorator.  
+  
+10     HeaderComponent  
+       ~~~~~~~~~~~~~~~  
+  
+  src/app/header/header.component.ts:7:14  
+    7 export class HeaderComponent{  
+                   ~~~~~~~~~~~~~~~  
+    'HeaderComponent' is declared here.  
+  
+  
+Error: src/app/header/header.component.ts:3:13 - error TS1146: Declaration expected.  
+  
+3 @Component(){              
+
+
+## Getting Things Rolling
+
+### Generate This Project
 
 ng new angular-complete-guide-course-project —no-strict  
 npm install —save-boostrap@3  
 
-## ng --version
+### ng --version
 
 Angular CLI: 13.0.4  
 Node: 16.13.0  
