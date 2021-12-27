@@ -4,9 +4,17 @@ https://github.com/christophervigliotti/
 
 ## Notes By Chapter
 
+### 53 Creating a "Recipe" Model
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656026#questions
+
+### 52 Alternative Non-Collapseable Navigation Bar
+
+added code that was provided by the course
+
 ### 51 Adding a Navigation Bar
 
-
+adding layout elements to the header component
 
 ### 50 Using the Components
 
