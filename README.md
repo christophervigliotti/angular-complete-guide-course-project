@@ -4,7 +4,15 @@ https://github.com/christophervigliotti/
 
 ## Notes By Chapter
 
-### 49. Creating The Components
+### 51 Adding a Navigation Bar
+
+
+
+### 50 Using the Components
+
+sketching out a layout...adding some component tags
+
+### 49 Creating The Components
 
 #### Components: Recipe List, Recipe Detail and Recipe Detail
 
