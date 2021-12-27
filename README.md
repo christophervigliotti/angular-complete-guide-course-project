@@ -16,11 +16,9 @@ This created this Component inside of the recipes folder `recipes/recipie-list`
 (other components created)
 
 #### Component: Recipes
-Created via ng g c recipes --skipTests true. Note that this is shorthand for ng generate component recipes --skipTests true (older syntax has the switch --spec false). Received this helpful message when running this command...
+Created via `ng g c recipes --skipTests true`. Note that this is shorthand for `ng generate component recipes --skipTests true` (older syntax has the switch `--spec false`). Received this helpful message when running this command...
 
-Support for camel case arguments has been deprecated and will be removed in a future major version. Use '--skip-tests' instead of '--skipTests'.
-
-
+`Support for camel case arguments has been deprecated and will be removed in a future major version. Use '--skip-tests' instead of '--skipTests'.`
 
 #### Error when attempting to create header.component.ts and header.component.html
 
