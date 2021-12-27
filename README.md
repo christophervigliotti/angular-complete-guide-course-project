@@ -30,19 +30,18 @@ Error: src/app/header/header.component.ts:3:13 - error TS1146: Declaration expec
 ##### Solution
 
 changed...
-
-@Component(){
-  selector: 'app-header',
-  templateUrl: './header.component.html'
-}
-
-...to...
-
-@Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html'
-})
-
+  
+@Component(){  
+  selector: 'app-header',  
+  templateUrl: './header.component.html'  
+}  
+  
+...to...  
+  
+@Component({  
+  selector: 'app-header',  
+  templateUrl: './header.component.html'  
+})  
 
 ## Getting Things Rolling
 
