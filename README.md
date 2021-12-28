@@ -4,6 +4,13 @@ https://github.com/christophervigliotti/
 
 ## Notes By Chapter
 
+### 54 Adding Content to the Recipes Components
+
+* recipe-list-component.html - added a hard-coded recipe
+* recipe-list-component.ts - changed the recipe property from an array to an array of recipes
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656030#questions
+
 ### 53 Creating a "Recipe" Model
 
 created a simple model in recipe.model.ts
