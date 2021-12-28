@@ -4,12 +4,21 @@ https://github.com/christophervigliotti/
 
 ## Notes By Chapter
 
+### 5x title
+
+* what_changed
+* lecture url_goes_here
+
+### 55 Outputting a List of Recipes with ngFor
+
+* what_changed
+* lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656034#questions
+
 ### 54 Adding Content to the Recipes Components
 
 * recipe-list-component.html - added a hard-coded recipe
 * recipe-list-component.ts - changed the recipe property from an array to an array of recipes
-
-https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656030#questions
+* lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656030
 
 ### 53 Creating a "Recipe" Model
 
