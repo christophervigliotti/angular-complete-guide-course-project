@@ -6,6 +6,23 @@ https://github.com/christophervigliotti/
 
 ### 53 Creating a "Recipe" Model
 
+created a simple model in recipe.model.ts
+
+```
+export class Recipe {
+    // properties
+    public name: string;
+    public description: string;
+    public imagePath: string; // url to image (we are using pics from the web)
+
+    constructor(name: string, description: string, imagePath: string){
+        this.name = name;
+        this.description = description;
+        this.imagePath = imagePath;
+    }
+}
+```
+
 https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656026#questions
 
 ### 52 Alternative Non-Collapseable Navigation Bar
