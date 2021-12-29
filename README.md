@@ -22,15 +22,16 @@ lecture url_goes_here
 
 lecture url_goes_here
 
-### 5x title
+### 56 Displaying Recipe Details
 
-* notes
+#### recipe-list.component.html...
+- added layout elements
 
-lecture url_goes_here
+lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656036#notes
 
 ### 55 Outputting a List of Recipes with ngFor
 
-- recipe-list.component.html..
+####  recipe-list.component.html
 - string interpolation `src="{{recipe.imagePath}}"` 
 - property binding `[src]="recipe.imagePath`
 
