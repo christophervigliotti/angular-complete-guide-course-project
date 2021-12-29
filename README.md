@@ -30,7 +30,7 @@ lecture url_goes_here
 
 ### 55 Outputting a List of Recipes with ngFor
 
-- recipe-list.component.html
+- recipe-list.component.html..
 - string interpolation `src="{{recipe.imagePath}}"` 
 - property binding `[src]="recipe.imagePath`
 

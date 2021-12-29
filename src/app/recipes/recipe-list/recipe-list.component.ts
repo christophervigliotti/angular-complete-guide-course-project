@@ -10,9 +10,13 @@ export class RecipeListComponent implements OnInit {
   recipes: Recipe[] = [
     new Recipe(
       'Droopy Cheeseburger',
-      'Salt and science.  Put it in your mouth!',
-      'https://upload.wikimedia.org/wikipedia/commons/f/fb/Burger-King-Bacon-Cheeseburger.jpg')
-  ];
+      'Salt and science.  Put it in your mouth...?',
+      'https://www.stockvault.net/data/2016/05/31/200979/preview16.jpg'),
+      new Recipe(
+        'Droopier Cheeseburger',
+        'Droop! There it is',
+        'https://www.stockvault.net/data/2016/05/31/200979/preview16.jpg')
+    ];
   constructor() { }
 
   ngOnInit(): void {
