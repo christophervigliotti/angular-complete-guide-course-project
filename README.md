@@ -4,11 +4,29 @@ https://github.com/christophervigliotti/
 
 ## Notes By Chapter
 
-### 5x title
+### 62 title
 
 - notes
 
 lecture url_goes_here
+
+### 61 Wrap Up & Next Steps
+
+- notes
+
+lecture url_goes_here
+
+### 60 Adding a Shopping List Edit Section
+
+- notes
+
+lecture url_goes_here
+
+### 59 Creating and Outputting the Shopping List
+
+- notes
+
+lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656042#notes
 
 ### 58 Creating an "Ingredient" Model
 
