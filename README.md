@@ -14,7 +14,8 @@ lecture url_goes_here
 
 - app/shared/ingredient.model.ts...
 
-```export class Ingredient {
+```
+export class Ingredient {
     public name: string;
     public amount: number;
 
@@ -23,16 +24,17 @@ lecture url_goes_here
             this.amount = amount;
     }
 
-}```
+}
+```
 ...you can rewrite the above by adding accessor "public" to the constructor arguments...
-```export class Ingredient {
+```
+export class Ingredient {
     constructor(public name:string, public amount: number){
     }
-}```
-
+}
+```
 
 https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656040#notes
-
 
 ### 57 Working on the ShoppingListComponent
 
