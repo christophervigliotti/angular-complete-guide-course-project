@@ -6,13 +6,35 @@ https://github.com/christophervigliotti/
 
 ### 5x title
 
-* what_changed
-* lecture url_goes_here
+* notes
+
+lecture url_goes_here
+
+### 5x title
+
+* notes
+
+lecture url_goes_here
+
+### 5x title
+
+* notes
+
+lecture url_goes_here
+
+### 5x title
+
+* notes
+
+lecture url_goes_here
 
 ### 55 Outputting a List of Recipes with ngFor
 
-* what_changed
-* lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656034#questions
+- recipe-list.component.html
+- string interpolation `src="{{recipe.imagePath}}"` 
+- property binding `[src]="recipe.imagePath`
+
+lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656034#notes
 
 ### 54 Adding Content to the Recipes Components
 
