@@ -10,17 +10,17 @@ https://github.com/christophervigliotti/
 
 lecture url_goes_here
 
-### 5x title
+### Creating an "Ingredient" Model
 
-* notes
-
-lecture url_goes_here
-
-### 5x title
-
-* notes
+* https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656040#notes
 
 lecture url_goes_here
+
+### 57 Working on the ShoppingListComponent
+
+* changes to shopping-list.component.html & .ts
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656038#notes 
 
 ### 56 Displaying Recipe Details
 
