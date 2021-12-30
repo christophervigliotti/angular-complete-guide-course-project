@@ -1,14 +1,14 @@
 # Course Project
 
-https://github.com/christophervigliotti/
-
-## Notes By Chapter
+## Section 3, Notes By Chapter
 
 ### 62 title
 
 - notes
 
 lecture url_goes_here
+
+## Section 2, Notes By Chapter
 
 ### 61 Wrap Up & Next Steps
 
