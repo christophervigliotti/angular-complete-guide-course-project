@@ -14,17 +14,17 @@ lecture url_goes_here
 
 - notes
 
-lecture url_goes_here
+lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656048#questions
 
 ### 60 Adding a Shopping List Edit Section
 
-- notes
+- added layout elements to shopping-edit component html
 
-lecture url_goes_here
+lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656046#questions
 
 ### 59 Creating and Outputting the Shopping List
 
-- notes
+- integrated the recipe-item model into the shopping-list component (ts, html)
 
 lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656042#notes
 
