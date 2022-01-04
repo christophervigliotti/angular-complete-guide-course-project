@@ -1,18 +1,38 @@
 # Course Project
 
-## Section 3, Notes By Chapter
+## Section 5: Components & Databinding Deep Dive
 
-### 62 title
+### 69 title
 
-- notes
+lecture url_here
 
-lecture url_goes_here
+### 68 title
 
-## Section 2, Notes By Chapter
+lecture url_here
+
+### 67 title
+
+lecture url_here
+
+### 66 title
+
+lecture url_here
+
+### 65 title
+
+lecture url_here
+
+### 64 Module Introduction
+
+lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656058#questions
+
+## Section 4: Debugging
+
+see https://github.com/christophervigliotti/angular-complete-guide-debugging
+
+## Section 3: Course Project - The Basics
 
 ### 61 Wrap Up & Next Steps
-
-- notes
 
 lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656048#questions
 
