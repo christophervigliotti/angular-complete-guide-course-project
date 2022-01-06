@@ -2,29 +2,7 @@
 
 ## Section 5: Components & Databinding Deep Dive
 
-### 69 title
-
-lecture url_here
-
-### 68 title
-
-lecture url_here
-
-### 67 title
-
-lecture url_here
-
-### 66 title
-
-lecture url_here
-
-### 65 title
-
-lecture url_here
-
-### 64 Module Introduction
-
-lecture https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656058#questions
+work for this section is performed in repo https://github.com/christophervigliotti/angular-complete-guide-components-and-databinding
 
 ## Section 4: Debugging
 
