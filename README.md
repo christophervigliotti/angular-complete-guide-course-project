@@ -2,6 +2,38 @@
 
 *This is one of several repos that I created for the course "Angular - The Complete Guide (2022 Edition)".  For a complete list of repos created for this course: https://gist.github.com/christophervigliotti/92e5b3b93cbe9d630d8e9d81b7eb6636 .*
 
+## Section 6: Course Project - Components & Databinding
+
+### 86 Adding Navigation with Event Binding and ngif
+
+* Challenge: use ngif to only load one of the two sections at a time 
+
+#### Step One: Sketch Out My Idea
+
+```
+// app.component.html...
+<app-recipes *ngIf="section == 'recipes'"></app-recipes>
+<app-shopping-list *ngIf="section == 'shopping-list'"></app-shopping-list>
+
+// app.component.ts...
+section = 'recipes';
+
+// header.component.html...
+<ul class="nav navbar-nav">
+    <li><a href="#" (click)="doSection('recipes')">Recipes</a></li>
+    <li><a href="#" (click)="doSection('shopping-list')">Shopping List</a></li>
+</ul>
+
+// header.component.ts...
+doSection(section: string){
+  console.log(section);
+}
+```
+
+### Step Two: Tie It Together
+
+* have header.component speak to app.component 
+
 ## Section 5: Components & Databinding Deep Dive
 
 work for this section is performed in repo https://github.com/christophervigliotti/angular-complete-guide-components-and-databinding

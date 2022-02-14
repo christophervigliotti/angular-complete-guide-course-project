@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   collapsed = true;
+
+  doSection(section: string){
+    console.log(section);
+  }
 }
