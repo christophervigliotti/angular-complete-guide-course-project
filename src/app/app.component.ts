@@ -7,12 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  // properties 
   title = 'angular-complete-guide-course-project';
   section = 'recipes';
-  // section = 'shopping-list';
 
-  // constructor(private route: ActivatedRoute){}
+  // methods
+  doSection(section: string){
+    console.log('app > doSection, section: ' + section);
+    this.section = section;
+  }
 
+  // methods, constructor & lifecycle hooks
   ngOnInit(){
     // console.log(this.section);
     /*

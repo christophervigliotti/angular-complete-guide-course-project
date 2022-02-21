@@ -34,6 +34,52 @@ doSection(section: string){
 
 * have header.component speak to app.component 
 
+```
+// app.component.ts...
+doSection(section: string){
+  console.log('app > doSection, section: ' + section);
+  this.section = section;
+}
+
+// app.component.html...
+<app-header
+  (sectionEventEmitter)="doSection($event)"
+></app-header>
+```
+
+### Step Three: A Little Extra
+
+I wanted to add conditional code that colored the active link.  I am certain that there is a better/different way to do this (but have not learned yet).
+
+```
+// app.component.ts...
+getColor(section: string){
+  return this.section === section ? 'pink' : 'red';
+}
+
+// app.component.html...
+<li>
+    <a 
+        href="#" 
+        (click)="doSection('recipes')" 
+        [ngStyle]="{'color':(getColor('recipes'))}"
+    >Recipes</a>
+</li>
+<li><a 
+        href="#" 
+        (click)="doSection('shopping-list')" 
+        [ngStyle]="{'color':(getColor('shopping-list'))}"
+    >Shopping List</a>
+</li>
+
+```
+
+### Step Four: How The Instructor Did It
+
+```
+notes_forthcoming
+```
+
 ## Section 5: Components & Databinding Deep Dive
 
 work for this section is performed in repo https://github.com/christophervigliotti/angular-complete-guide-components-and-databinding
