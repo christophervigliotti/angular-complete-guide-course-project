@@ -4,6 +4,10 @@
 
 ## Section 6: Course Project - Components & Databinding
 
+### 87 Passing Recipe Data with Property Binding
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656142#questions
+
 ### 86 Adding Navigation with Event Binding and ngif
 
 * Challenge: use ngif to only load one of the two sections at a time 
@@ -20,34 +24,34 @@ section = 'recipes';
 
 // header.component.html...
 <ul class="nav navbar-nav">
-    <li><a href="#" (click)="doSection('recipes')">Recipes</a></li>
-    <li><a href="#" (click)="doSection('shopping-list')">Shopping List</a></li>
+    <li><a href="#" (click)="handleSectionChange('recipes')">Recipes</a></li>
+    <li><a href="#" (click)="handleSectionChange('shopping-list')">Shopping List</a></li>
 </ul>
 
 // header.component.ts...
-doSection(section: string){
+handleSectionChange(section: string){
   console.log(section);
 }
 ```
 
-### Step Two: Tie It Together
+#### Step Two: Tie It Together
 
 * have header.component speak to app.component 
 
 ```
 // app.component.ts...
-doSection(section: string){
-  console.log('app > doSection, section: ' + section);
+handleSectionChange(section: string){
+  console.log('app > handleSectionChange, section: ' + section);
   this.section = section;
 }
 
 // app.component.html...
 <app-header
-  (sectionEventEmitter)="doSection($event)"
+  (sectionLinkClickEventEmitter)="handleSectionChange($event)"
 ></app-header>
 ```
 
-### Step Three: A Little Extra
+#### Step Three: A Little Extra
 
 I wanted to add conditional code that colored the active link.  I am certain that there is a better/different way to do this (but have not learned yet).
 
@@ -61,24 +65,22 @@ getColor(section: string){
 <li>
     <a 
         href="#" 
-        (click)="doSection('recipes')" 
+        (click)="handleSectionChange('recipes')" 
         [ngStyle]="{'color':(getColor('recipes'))}"
     >Recipes</a>
 </li>
 <li><a 
         href="#" 
-        (click)="doSection('shopping-list')" 
+        (click)="handleSectionChange('shopping-list')" 
         [ngStyle]="{'color':(getColor('shopping-list'))}"
     >Shopping List</a>
 </li>
 
 ```
 
-### Step Four: How The Instructor Did It
+#### Step Four: How The Instructor Did It
 
-```
-notes_forthcoming
-```
+Yup I got it.
 
 ## Section 5: Components & Databinding Deep Dive
 

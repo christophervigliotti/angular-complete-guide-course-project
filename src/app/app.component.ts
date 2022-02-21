@@ -13,14 +13,15 @@ export class AppComponent implements OnInit {
   section = 'recipes';
 
   // methods
-  doSection(section: string){
-    console.log('app > doSection, section: ' + section);
+  handleSectionChange(section: string){
+    console.log('app > handleSectionChange');
+    console.log('  section:' + section);
     this.section = section;
   }
 
   // methods, constructor & lifecycle hooks
   ngOnInit(){
-    // console.log(this.section);
+    console.log('app > ngOnInit');
     /*
     this.route.queryParams.subscribe(params => {
       console.log(params); 

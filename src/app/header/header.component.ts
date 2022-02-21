@@ -12,14 +12,14 @@ export class HeaderComponent
   // properties
   collapsed = true;
   section = 'recipes';
-  @Output() sectionEventEmitter = new EventEmitter<string>();
+  @Output() sectionLinkClickEventEmitter = new EventEmitter<string>();
 
   // methods
-  doSection(section: string){
+  onClickSectionLink(section: string){
     this.section = section;
-    console.log('header > doSection');
+    console.log('header > handleSectionChange');
     console.log('  section:' + section);
-    this.sectionEventEmitter.emit(section);
+    this.sectionLinkClickEventEmitter.emit(section);
   }
 
   getColor(section: string){
