@@ -4,6 +4,12 @@
 
 ## Section 6: Course Project - Components & Databinding
 
+### 88 Passing Data with Event and Property Binding (Combined)
+
+click a link, emit to parent component, saying "this recipe was selected"
+
+TODO_revisit lesson and take more notes
+
 ### 87 Passing Recipe Data with Property Binding
 
 #### What's Happening Here?!
