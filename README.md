@@ -4,11 +4,117 @@
 
 ## Section 6: Course Project - Components & Databinding
 
+### 90 
+
+### 89
+
 ### 88 Passing Data with Event and Property Binding (Combined)
 
-click a link, emit to parent component, saying "this recipe was selected"
+TODO: resume note-taking at 3:11
 
-TODO_revisit lesson and take more notes
+#### 1. Define an event listener in recipe-item (using both the component and the template)
+
+`(click)="onSelected()"` is a click listener...specifically it is a click listener that fires method `onSelected()` when clicked.
+```
+<!-- recipe-item template -->
+<a 
+    href="#" 
+    class="list-group-item clearfix" 
+    (click)="onSelected()"
+>
+```
+
+`@Output() recipeSelected ` allows the code to emit an event (via method `onSelected()`).   `@Output` means that it can be listened to from outside of this component. Method  `onSelected` triggers an event...specifically this code is what triggers the event: `this.recipeSelected.emit();`.  
+```
+// recipe-item component
+@Input() recipe: Recipe;
+@Output() recipeSelected = new EventEmitter<void>(); // so we can listen to this event from outside
+
+onSelected(){
+    this.recipeSelected.emit();
+}
+
+```
+#### 2. Implement the event listener in the recipe-list template
+
+Here we implement the event defined in the previous step with this code: `(recipeSelected)="onRecipeSelected(recipeEl)"`.
+```
+<!-- recipe-list template -->
+<app-recipe-item
+    *ngFor="let recipeEl of recipes" 
+    [recipe]="recipeEl" 
+    (recipeSelected)="onRecipeSelected(recipeEl)" 
+></app-recipe-item>
+```
+
+
+
+```
+// recipe-list component
+@Output() recipeWasSelected = new EventEmitter<Recipe>(); 
+// and...
+onRecipeSelected(recipe: Recipe){
+    this.recipeWasSelected.emit(recipe);
+}
+```
+
+
+
+recipes component
+```
+selectedRecipe: Recipe;
+```
+
+recipes template
+```
+<h2>Recipes</h2>
+<div class="row">
+    <div class="col-md-5">
+        <app-recipe-list
+            (recipeWasSelected)="selectedRecipe = $event"
+        ></app-recipe-list>
+    </div>
+    <div class="col-md-7">
+        <app-recipe-detail
+            *ngIf="selectedRecipe; else infoText" 
+            [recipe]="selectedRecipe"
+        ></app-recipe-detail>
+        <ng-template #infoText>
+            <p>Please select a recipe.</p>
+        </ng-template>
+    </div>
+</div>
+```
+
+
+
+
+
+
+recipe-detail component
+```
+import { Recipe } from '../recipe.model';
+// and
+@Input() recipe: Recipe;
+```
+
+recipe-detail template
+```
+<div class="row">
+    <div class="col-xs-12">
+        <h1>{{recipe.name}}</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <img 
+        [src]="recipe.imagePath" 
+        alt="{{recipe.name}}" 
+        class="img-responsive" 
+        style="max-height:200px;" />
+    </div>
+</div>
+```
 
 ### 87 Passing Recipe Data with Property Binding
 
