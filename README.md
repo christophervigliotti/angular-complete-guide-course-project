@@ -8,6 +8,8 @@
 
 ### 89
 
+TODO: once notes are done merge the 88 feature branch into main
+
 ### 88 Passing Data with Event and Property Binding (Combined)
 
 TODO: resume note-taking at 3:11
