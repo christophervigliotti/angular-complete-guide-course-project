@@ -6,14 +6,62 @@
 
 ### 87 Passing Recipe Data with Property Binding
 
-https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656142#questions
+#### What's Happening Here?!
+
+1. recipe.model.ts - Recipe is defined in the model
+2. recipe-list.component.ts - the Recipes array is defined in recipe-list component (contains a few hard-coded examples so we can see something)
+3. recipe-item.component.ts - The recipe model is imported and defined as an @Input var so we can pass it to the 
+4. The recipe-list component loops through the Recipes array, passing in each recipe to the recipe-item template.  
+
+#### The Code
+
+In recipe-list template, pass in each recipe to the recipe-item template...
+```
+<app-recipe-item
+    *ngFor="let recipeEl of recipes" 
+    [recipe]="recipeEl"
+></app-recipe-item>
+```
+
+In recipe item template, display the recipe details...
+```
+<a 
+href="#" 
+class="list-group-item clearfix" 
+>
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{recipe.name}}</h4>
+        <p class="list-group-item-text">{{recipe.description}}</p>
+    </div>
+    <span class="pull-right">
+        <img 
+            [src]="recipe.imagePath"
+            alt="{{recipe.name}}" 
+            class="img-responsive" 
+            style="max-height: 50px;" 
+        />
+    </span>
+</a>
+```
+
+In recipe item component, import the model and add an @Input() decorator.  This allows us to bind this property from elsewhere...
+```
+import { Recipe } from '../../recipe.model';
+// and
+@Input() recipe: Recipe;
+```
+
+#### More Stuff
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656142#questions 
+
 
 ### 86 Adding Navigation with Event Binding and ngif
 
 * Challenge: use ngif to only load one of the two sections at a time 
 
 #### Step One: Sketch Out My Idea
-
+ 
 ```
 // app.component.html...
 <app-recipes *ngIf="section == 'recipes'"></app-recipes>
@@ -33,6 +81,7 @@ handleSectionChange(section: string){
   console.log(section);
 }
 ```
+
 
 #### Step Two: Tie It Together
 
