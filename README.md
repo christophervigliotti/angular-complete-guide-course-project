@@ -14,7 +14,7 @@ TODO: once notes are done merge the 88 feature branch into main
 
 TODO: resume note-taking at 3:11
 
-#### 1. Define an event listener in recipe-item (using both the component and the template)
+#### 1. Define an event emitter in recipe-item (using both the component and the template)
 
 `(click)="onSelected()"` is a click listener...specifically it is a click listener that fires method `onSelected()` when clicked.
 ```
@@ -37,9 +37,14 @@ onSelected(){
 }
 
 ```
-#### 2. Implement the event listener in the recipe-list template
+#### 2. Implement the event emitter in the recipe-list template (and define another event emitter to pass data along to the parent of recipe-list, which is 'recipes')
 
-Here we implement the event defined in the previous step with this code: `(recipeSelected)="onRecipeSelected(recipeEl)"`. When a recipe is selected 
+Here we implement the event defined in the previous step with `(recipeSelected)="onRecipeSelected(recipeEl)"`.  This listens for the event (that is emitted in recipe-item when a recipe is clicked.  
+  
+`[recipe]="recipeEl"` declares a local variable recipe
+
+We define another event with `(recipeSelected)="onRecipeSelected(recipeEl)"` and `@Output() recipeWasSelected = new EventEmitter<Recipe>();` and we emit (or fire) it (passing the recipe) with method `onRecipeSelected()`.
+
 ```
 <!-- recipe-list template -->
 <app-recipe-item
@@ -47,11 +52,7 @@ Here we implement the event defined in the previous step with this code: `(recip
     [recipe]="recipeEl" 
     (recipeSelected)="onRecipeSelected(recipeEl)" 
 ></app-recipe-item>
-```
 
-
-
-```
 // recipe-list component
 @Output() recipeWasSelected = new EventEmitter<Recipe>(); 
 // and...
@@ -60,15 +61,16 @@ onRecipeSelected(recipe: Recipe){
 }
 ```
 
+#### 3. In recipes we listen for and receive the event emitted by recipe-list and then display recipe details
 
+listens for the event from the child recipe-list `(recipeWasSelected)="selectedRecipe = $event"`
 
-recipes component
+Also note the ngIf / ng-template code...this displays 'select a recipe' until one is selected.  Cool stuff
+
 ```
+// recipes component
 selectedRecipe: Recipe;
-```
-
-recipes template
-```
+<!-- recipes template -->
 <h2>Recipes</h2>
 <div class="row">
     <div class="col-md-5">
@@ -87,10 +89,7 @@ recipes template
     </div>
 </div>
 ```
-
-
-
-
+#### 4. Recipe detail displays...the recipe details (naturally)
 
 
 recipe-detail component
