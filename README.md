@@ -8,7 +8,9 @@
 
 ### 89 Make sure you have FormsModule added!
 
-One quick note: In case you're hitting an error in the next lecture, make sure you have FormsModule added to your imports[] in the AppModule. Also have a look at the following Q&A thread for more info: https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/questions/4924644
+One quick note: In case you're hitting an error in the next lecture, make sure you have FormsModule added to your imports[] in the AppModule. Also have a look at the following Q&A thread for more info: https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/questions/4924644  
+
+DONE!
 
 ### 88 Passing Data with Event and Property Binding (Combined)
 
