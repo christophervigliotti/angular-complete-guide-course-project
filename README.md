@@ -6,13 +6,11 @@
 
 ### 90 
 
-### 89
+### 89 Make sure you have FormsModule added!
 
-TODO: once notes are done merge the 88 feature branch into main
+One quick note: In case you're hitting an error in the next lecture, make sure you have FormsModule added to your imports[] in the AppModule. Also have a look at the following Q&A thread for more info: https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/questions/4924644
 
 ### 88 Passing Data with Event and Property Binding (Combined)
-
-TODO: resume note-taking at 3:11
 
 #### 1. Define an event emitter in recipe-item (using both the component and the template)
 
