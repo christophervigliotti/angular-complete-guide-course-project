@@ -4,7 +4,12 @@
 
 ## Section 6: Course Project - Components & Databinding
 
-### 90 
+### 90 Allowing the User to Add Ingredients to the Shopping List
+
+* In shopping-edit template, added local references #nameInput and #amountInput to their respective text input fields
+* challenge: make add, delete and clear buttons functional (by passing by argument or by selecting them with @viewchild)
+* from my earlier notes: `@ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;`
+* rewatch https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656094#overview
 
 ### 89 Make sure you have FormsModule added!
 
