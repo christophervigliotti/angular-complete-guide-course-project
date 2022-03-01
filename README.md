@@ -39,7 +39,7 @@ onSelected(){
 ```
 #### 2. Implement the event listener in the recipe-list template
 
-Here we implement the event defined in the previous step with this code: `(recipeSelected)="onRecipeSelected(recipeEl)"`.
+Here we implement the event defined in the previous step with this code: `(recipeSelected)="onRecipeSelected(recipeEl)"`. When a recipe is selected 
 ```
 <!-- recipe-list template -->
 <app-recipe-item
