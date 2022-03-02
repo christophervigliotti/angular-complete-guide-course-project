@@ -10,7 +10,7 @@ export class AppComponent implements OnInit {
 
   // properties 
   title = 'angular-complete-guide-course-project';
-  section = 'recipes';
+  section = 'shopping-list';
 
   // methods
   handleSectionChange(section: string){

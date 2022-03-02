@@ -9,7 +9,7 @@
 * In shopping-edit template, added local references #nameInput and #amountInput to their respective text input fields
 * challenge: make add, delete and clear buttons functional (by passing by argument or by selecting them with @viewchild)
 * from my earlier notes: `@ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;`
-* rewatch https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656094#overview
+* rewatched https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656094#overview
 
 
 #### shopping-edit template
@@ -43,11 +43,11 @@
 <button 
     class="btn btn-danger" 
     type="button"
-    (click)="onDeleteIngredient(nameInput,amountInput)"
+    (click)="onDeleteItem(nameInput,amountInput)"
 >Delete</button>
 ```
 
-# shopping-edit component
+#### shopping-edit component
 
 ```
 // Also added event emitters to pass the action to the parent
@@ -57,7 +57,7 @@
 // added viewChild declarations, methods referenced in `(click)` event handlers in the cooresponding template
 @ViewChild('nameInput', {static:true}) nameInput: ElementRef;
 @ViewChild('amountInput', {static:true}) amountInput: ElementRef;
-onAddIngredient(
+onAddItem(
     nameInput: HTMLInputElement,
     amountInput: HTMLInputElement
 ){
@@ -65,7 +65,7 @@ onAddIngredient(
     console.log(' name:' + this.nameInput.nativeElement.value);
     console.log(' amount:' + this.amountInput.nativeElement.value);
 }
-onDeleteIngredient(
+onDeleteItem(
     nameInput: HTMLInputElement,
     amountInput: HTMLInputElement
 ){
@@ -73,6 +73,22 @@ onDeleteIngredient(
     console.log(' name:' + this.nameInput.nativeElement.value);
     console.log(' amount:' + this.amountInput.nativeElement.value);
 }
+```
+
+#### Rework
+
+##### shopping-edit template
+```
+TODO: add code and explain
+```
+
+##### shopping-edit component
+```
+TODO: add code and explain
+```
+##### shopping-list component (parent of shopping-edit)
+```
+TODO: add code and explain
 ```
 
 ### 89 Make sure you have FormsModule added!

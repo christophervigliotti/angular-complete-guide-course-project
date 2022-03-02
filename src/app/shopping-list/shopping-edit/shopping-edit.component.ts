@@ -1,4 +1,6 @@
+import { ForwardRefHandling } from '@angular/compiler';
 import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
+import { Ingredient } from 'src/app/shared/ingredient.model';
 @Component({
   selector: 'app-shopping-edit',
   templateUrl: './shopping-edit.component.html',
@@ -6,30 +8,19 @@ import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '
 })
 export class ShoppingEditComponent implements OnInit {
 
-  @Output() recipeAdded = new EventEmitter<{name: string, amount: string}>();
-  @Output() recipeDeleted = new EventEmitter<{name: string, amount: string}>();
+  @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
-  @ViewChild('nameInput', {static:true}) nameInput: ElementRef;
-  @ViewChild('amountInput', {static:true}) amountInput: ElementRef;
+  @ViewChild('nameInput', {static:true}) nameInputRef: ElementRef;
+  @ViewChild('amountInput', {static:true}) amountInputRef: ElementRef;
 
-  onAddIngredient(
-    nameInput: HTMLInputElement,
-    amountInput: HTMLInputElement
-  ){
-    console.log('shopping-edit > onAddIngredient');
-    console.log(' name:' + this.nameInput.nativeElement.value);
-    console.log(' amount:' + this.amountInput.nativeElement.value);
-    // TODO: add the new Ingredient here
-  }
-
-  onDeleteIngredient(
-    nameInput: HTMLInputElement,
-    amountInput: HTMLInputElement
-  ){
-    console.log('shopping-edit > onDeleteIngredient');
-    console.log(' name:' + this.nameInput.nativeElement.value);
-    console.log(' amount:' + this.amountInput.nativeElement.value);
-    // TODO: remove the Ingredient here
+  onAddItem(){
+    console.log('shopping-edit > onAddItem');
+    const newIngredient = new Ingredient
+      (
+        this.nameInputRef.nativeElement.value,
+        this.amountInputRef.nativeElement.value
+      );
+    this.ingredientAdded.emit(newIngredient);
   }
 
   constructor() { }
