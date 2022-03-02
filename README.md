@@ -11,6 +11,70 @@
 * from my earlier notes: `@ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;`
 * rewatch https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656094#overview
 
+
+#### shopping-edit template
+
+```
+<!-- added local references `#nameInput` and `#amountInput`...  -->
+<div class="col-sm-5 form-group">
+    <label for="name">Name</label>
+    <input 
+        type="text" 
+        id="name" 
+        class="form-control" 
+        #nameInput
+    />
+</div>
+<div class="col-sm-2 form-group">
+    <label for="amount">Amount</label>
+    <input 
+        type="number" 
+        id="amount" 
+        class="form-control" 
+        #amountInput 
+    />
+</div>
+<!-- ...and... -->
+<button 
+    class="btn btn-success" 
+    type="submit" 
+    (click)="onAddRecipe(nameInput,amountInput)"
+>Add</button>
+<button 
+    class="btn btn-danger" 
+    type="button"
+    (click)="onDeleteIngredient(nameInput,amountInput)"
+>Delete</button>
+```
+
+# shopping-edit component
+
+```
+// Also added event emitters to pass the action to the parent
+@Output() recipeAdded = new EventEmitter<{name: string, amount: string}>();
+@Output() recipeDeleted = new EventEmitter<{name: string, amount: string}>();
+
+// added viewChild declarations, methods referenced in `(click)` event handlers in the cooresponding template
+@ViewChild('nameInput', {static:true}) nameInput: ElementRef;
+@ViewChild('amountInput', {static:true}) amountInput: ElementRef;
+onAddIngredient(
+    nameInput: HTMLInputElement,
+    amountInput: HTMLInputElement
+){
+    console.log('shopping-edit > onAddRecipe');
+    console.log(' name:' + this.nameInput.nativeElement.value);
+    console.log(' amount:' + this.amountInput.nativeElement.value);
+}
+onDeleteIngredient(
+    nameInput: HTMLInputElement,
+    amountInput: HTMLInputElement
+){
+    console.log('shopping-edit > onDeleteRecipe');
+    console.log(' name:' + this.nameInput.nativeElement.value);
+    console.log(' amount:' + this.amountInput.nativeElement.value);
+}
+```
+
 ### 89 Make sure you have FormsModule added!
 
 One quick note: In case you're hitting an error in the next lecture, make sure you have FormsModule added to your imports[] in the AppModule. Also have a look at the following Q&A thread for more info: https://www.udemy.com/the-complete-guide-to-angular-2/learn/v4/questions/4924644  

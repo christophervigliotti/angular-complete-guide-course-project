@@ -8,6 +8,7 @@
                     type="text" 
                     id="name" 
                     class="form-control" 
+                    #nameInput
                 />
             </div>
             <div class="col-sm-2 form-group">
@@ -16,15 +17,27 @@
                     type="number" 
                     id="amount" 
                     class="form-control" 
+                    #amountInput 
                 />
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-xs-12">
-            <button class="btn btn-success" type="submit">Add</button>
-            <button class="btn btn-danger" type="button">Delete</button>
-            <button class="btn btn-primary" type="button">Clear</button>
+            <button 
+                class="btn btn-success" 
+                type="submit" 
+                (click)="onAddIngredient(nameInput,amountInput)"
+            >Add</button>
+            <button 
+                class="btn btn-danger" 
+                type="button"
+                (click)="onDeleteIngredient(nameInput,amountInput)"
+            >Delete</button>
+            <button 
+                class="btn btn-primary" 
+                type="button"
+            >Clear</button>
         </div>
     </div>
 </div>
