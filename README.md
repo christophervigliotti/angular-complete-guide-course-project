@@ -5,90 +5,72 @@
 ## Section 6: Course Project - Components & Databinding
 
 ### 90 Allowing the User to Add Ingredients to the Shopping List
-
 * In shopping-edit template, added local references #nameInput and #amountInput to their respective text input fields
-* challenge: make add, delete and clear buttons functional (by passing by argument or by selecting them with @viewchild)
+* challenge: make add,buttonsfunctional (by passing by argument or by selecting them with @viewchild)
 * from my earlier notes: `@ViewChild('serverContentInput', {static: true}) serverContentInput: ElementRef;`
 * rewatched https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656094#overview
 
-
 #### shopping-edit template
-
+add local references #nameInput and #amountInput...
 ```
-<!-- added local references `#nameInput` and `#amountInput`...  -->
-<div class="col-sm-5 form-group">
-    <label for="name">Name</label>
-    <input 
-        type="text" 
-        id="name" 
-        class="form-control" 
-        #nameInput
-    />
-</div>
-<div class="col-sm-2 form-group">
-    <label for="amount">Amount</label>
-    <input 
-        type="number" 
-        id="amount" 
-        class="form-control" 
-        #amountInput 
-    />
-</div>
-<!-- ...and... -->
+<input 
+    type="text" 
+    id="name" 
+    class="form-control" 
+    #nameInput
+/>
+<input 
+    type="number" 
+    id="amount" 
+    class="form-control" 
+    #amountInput 
+/>
+```
+...and also add click listener...
+```
 <button 
     class="btn btn-success" 
     type="submit" 
-    (click)="onAddRecipe(nameInput,amountInput)"
+    (click)="onAddItem()"
 >Add</button>
-<button 
-    class="btn btn-danger" 
-    type="button"
-    (click)="onDeleteItem(nameInput,amountInput)"
->Delete</button>
 ```
 
 #### shopping-edit component
-
+add an event emitter to broadcast to the parent...
 ```
-// Also added event emitters to pass the action to the parent
-@Output() recipeAdded = new EventEmitter<{name: string, amount: string}>();
-@Output() recipeDeleted = new EventEmitter<{name: string, amount: string}>();
-
-// added viewChild declarations, methods referenced in `(click)` event handlers in the cooresponding template
-@ViewChild('nameInput', {static:true}) nameInput: ElementRef;
-@ViewChild('amountInput', {static:true}) amountInput: ElementRef;
-onAddItem(
-    nameInput: HTMLInputElement,
-    amountInput: HTMLInputElement
-){
-    console.log('shopping-edit > onAddRecipe');
-    console.log(' name:' + this.nameInput.nativeElement.value);
-    console.log(' amount:' + this.amountInput.nativeElement.value);
-}
-onDeleteItem(
-    nameInput: HTMLInputElement,
-    amountInput: HTMLInputElement
-){
-    console.log('shopping-edit > onDeleteRecipe');
-    console.log(' name:' + this.nameInput.nativeElement.value);
-    console.log(' amount:' + this.amountInput.nativeElement.value);
+@Output() ingredientAdded = new EventEmitter<Ingredient>();
+```
+...add viewChild decorator sso that we can grab the values from the template...
+```
+@ViewChild('nameInput', {static:true}) nameInputRef: ElementRef;
+@ViewChild('amountInput', {static:true}) amountInputRef: ElementRef;
+```
+...lastly add the onAddItem() method that we are calling in the click listener in the cooresponding template...
+```
+onAddItem(){
+    const newIngredient = new Ingredient
+        (
+        this.nameInputRef.nativeElement.value,
+        this.amountInputRef.nativeElement.value
+        );
+    this.ingredientAdded.emit(newIngredient);
 }
 ```
 
-#### Rework
+#### shopping-list template (parent of shopping-edit)
+add a listener to listen for the ingredientAdded event
+```
+<app-shopping-edit
+    (ingredientAdded)="onIngredientAdded($event)"
+></app-shopping-edit>
+```
 
-##### shopping-edit template
+#### shopping-list component
+implement the method that our listener is calling...have it push the new ingredient to the ingredients array.  Magic!
 ```
-TODO: add code and explain
-```
-
-##### shopping-edit component
-```
-TODO: add code and explain
-```
-##### shopping-list component (parent of shopping-edit)
-```
-TODO: add code and explain
+onIngredientAdded(ingredient: Ingredient){
+    this.ingredients.push(ingredient);
+}
 ```
 
 ### 89 Make sure you have FormsModule added!
