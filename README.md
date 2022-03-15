@@ -6,16 +6,23 @@
 
 ### 104. Closing the Dropdown From Anywhere
 
-link
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/14906174#overview
 
-notes
-
-```
-code
-```
+#### dropdown.directive.ts
 
 ```
-code
+import {Directive, ElementRef, HostBinding, HostListener} from '@angular/core';
+ 
+@Directive({
+  selector: '[appDropdown]'
+})
+export class DropdownDirective {
+  @HostBinding('class.open') isOpen = false;
+  @HostListener('document:click', ['$event']) toggleOpen(event: Event) {
+    this.isOpen = this.elRef.nativeElement.contains(event.target) ? !this.isOpen : false;
+  }
+  constructor(private elRef: ElementRef) {}
+}
 ```
 
 ### 103. Building and Using a Dropdown Directive
