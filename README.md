@@ -22,15 +22,40 @@ code
 
 https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656192#overview
 
-notes
+#### Requirement
+
+Create dropdown.directive.ts and add the 'open' class to the Manage Recipe button group when clicked (and remove it when clicking anywhere else)
+
+#### dropdown.directive.ts
+
+* to listen to a click, add `@HostListener`, which will fire method `toggleOpen()`
+* add `isOpen` variable to track open/closed status
+* add logic inside of `HostListener` to toggle the boolean variable `isOpen`
+* dynamically attach/detatch a css class via `@HostBindings`.  This allow us to bind to properties of the element that this directive is attached to
+* ('class.open') where `class` is an array of classes and `open` is the class name that we want to add but only when `isOpen = false` (conversely is removed when the element attached to this directive is clicked when isOpen is true)
 
 ```
-code
+import { Directive, HostBinding, HostListener } from "@angular/core";
+
+@Directive({
+    selector: '[appDropdown]'
+})
+export class DropdownDirective {
+    @HostBinding('class.open') isOpen = false;
+    @HostListener('click') toggleOpen() {
+        this.isOpen = !this.isOpen;
+    }
+}
 ```
 
-```
-code
-```
+##### app.module.ts
+`import { DropdownDirective } from './shared/dropdown.directive';` and add `DropdownDirective` to the `declarations` array
+
+#### recipe-detail.component.html
+Implemented the directive by adding `appDropdown` to `<div appDropdown class="btn-group">`
+
+#### header.component.html
+Implemented the directive by adding `appDropdown` to `<li appDropdown class="dropdown">`
 
 ## Section 6: Course Project - Components & Databinding
 
