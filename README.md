@@ -2,6 +2,24 @@
 
 *This is one of several repos that I created for the course ["Angular - The Complete Guide (2022 Edition)"](https://www.udemy.com/course/the-complete-guide-to-angular-2/).  For a complete list of repos created for this course: https://gist.github.com/christophervigliotti/92e5b3b93cbe9d630d8e9d81b7eb6636 .*
 
+## Section 10: Course Project - Services & Dependency Injection
+
+### 122. Adding Ingredients to Recipes
+
+### 121. Using Services for Pushing Data from A to B
+
+### 120. Adding the Shopping List Service
+
+### 119. Using a Service for Cross-Component Communication
+
+### 118. Managing Recipes in a Recipe Service
+
+### 117. Setting up the Services
+
+### 116. Introduction
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656232#overview 
+
 ## Section 7: Course Project - Directives
 
 ### 104. Closing the Dropdown From Anywhere
