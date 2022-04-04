@@ -9,7 +9,9 @@
         <app-recipe-item
             *ngFor="let recipeEl of recipes" 
             [recipe]="recipeEl" 
-            (recipeSelected)="onRecipeSelected(recipeEl)" 
         ></app-recipe-item>
+        <!--- 
+        119 removed: (recipeSelected)="onRecipeSelected(recipeEl)" from app-recipe-item tag above
+        --->
     </div>
 </div>

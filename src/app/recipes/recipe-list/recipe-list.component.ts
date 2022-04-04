@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
 
@@ -11,18 +11,20 @@ export class RecipeListComponent implements OnInit {
 
   // properties
 
-  @Output() recipeWasSelected = new EventEmitter<Recipe>(); 
+  // 119 removed @Output() recipeWasSelected = new EventEmitter<Recipe>(); 
 
   // 118 declared an empty Recipe array
   recipes: Recipe[];
 
   // methods
 
+  /* 119 removed
   onRecipeSelected(recipe: Recipe){
     console.log('recipe-list > onRecipeSelected');
     console.log(recipe);
     this.recipeWasSelected.emit(recipe);
   }
+  */
 
   constructor(
     // 118 added a private argument here.  remember that this essentially adds 'recipeService' as an object property

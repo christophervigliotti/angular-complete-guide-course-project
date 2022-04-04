@@ -1,6 +1,10 @@
+import { EventEmitter } from "@angular/core";
 import { Recipe } from "./recipe.model";
 
 export class RecipeService {
+    // 119 added
+    recipeSelected = new EventEmitter<Recipe>();
+
     // 118 moved the recipes array declration here and set it to private.  as such it cannot be directly accessed
     private recipes: Recipe[] = [
         new Recipe(

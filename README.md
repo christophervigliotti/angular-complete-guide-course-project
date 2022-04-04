@@ -10,13 +10,17 @@
 
 ### 120. Adding the Shopping List Service
 
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656240#overview 
+
 ### 119. Using a Service for Cross-Component Communication
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656238#overview
 
 ### 118. Managing Recipes in a Recipe Service
 
 https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656236#overview
 
-here
+notes added directly to files
 
 ### 117. Setting up the Services
 
