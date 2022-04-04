@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Recipe } from '../recipe.model';
+import { RecipeService } from '../recipe.service';
 
 @Component({
   selector: 'app-recipe-list',
@@ -12,16 +13,8 @@ export class RecipeListComponent implements OnInit {
 
   @Output() recipeWasSelected = new EventEmitter<Recipe>(); 
 
-  recipes: Recipe[] = [
-    new Recipe(
-      'Droopy Cheeseburger',
-      'Salt and science.  Put it in your mouth...?',
-      'https://www.stockvault.net/data/2016/05/31/200979/preview16.jpg'),
-      new Recipe(
-        'Droopier Cheeseburger',
-        'Droop! There it is',
-        'https://www.stockvault.net/data/2016/05/31/200979/preview16.jpg')
-    ];
+  // 118 declared an empty Recipe array
+  recipes: Recipe[];
 
   // methods
 
@@ -31,9 +24,14 @@ export class RecipeListComponent implements OnInit {
     this.recipeWasSelected.emit(recipe);
   }
 
-  constructor() { }
+  constructor(
+    // 118 added a private argument here.  remember that this essentially adds 'recipeService' as an object property
+    private recipeService: RecipeService
+  ) { }
 
   ngOnInit(): void {
+    // 118 setting the recipes property using the newly created method in our service getRecipes()
+    this.recipes = this.recipeService.getRecipes();
   }
 
 }
