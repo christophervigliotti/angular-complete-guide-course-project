@@ -14,7 +14,15 @@
 
 ### 118. Managing Recipes in a Recipe Service
 
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656236#overview
+
+here
+
 ### 117. Setting up the Services
+
+https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656234#overview 
+
+files reciope.service.ts and shopping-list.service.ts created, `export` code added
 
 ### 116. Introduction
 
