@@ -1,6 +1,7 @@
-import { ForwardRefHandling } from '@angular/compiler';
-import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
+// do I need this? import { ForwardRefHandling } from '@angular/compiler';
+import { Component, OnInit, ViewChild, ElementRef, } from '@angular/core'; // 120 removed Output, EventEmitter
 import { Ingredient } from 'src/app/shared/ingredient.model';
+import { ShoppingListService } from '../shopping-list.service';
 @Component({
   selector: 'app-shopping-edit',
   templateUrl: './shopping-edit.component.html',
@@ -8,7 +9,7 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
 })
 export class ShoppingEditComponent implements OnInit {
 
-  @Output() ingredientAdded = new EventEmitter<Ingredient>();
+  // 120 removed @Output() ingredientAdded = new EventEmitter<Ingredient>();
 
   @ViewChild('nameInput', {static:true}) nameInputRef: ElementRef;
   @ViewChild('amountInput', {static:true}) amountInputRef: ElementRef;
@@ -20,10 +21,14 @@ export class ShoppingEditComponent implements OnInit {
         this.nameInputRef.nativeElement.value,
         this.amountInputRef.nativeElement.value
       );
-    this.ingredientAdded.emit(newIngredient);
+    // 120 removed (bc error)... this.ingredientAdded.emit(newIngredient);
+    this.slService.addIngredient(newIngredient);
   }
 
-  constructor() { }
+  constructor(
+    // 120 added 
+    private slService: ShoppingListService
+  ) { }
 
   ngOnInit(): void {
   }
