@@ -31,7 +31,20 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit(): void {
     // 120 initialize
+    console.log('shopping-list.component ngOnInit');
     this.ingredients = this.slService.getIngredients();
+
+    // 121 subscribe to the event emitter in shopping-list service...
+    this.slService.ingredientsChanged.subscribe
+    (
+      // 121 pass in the ingredient to this ??anonymous function??
+      (ingredients: Ingredient[]) => 
+        {
+          console.log('shopping-list.component ngOnInit > subscribe');
+          // 121 update the ingredients array property of this component with the ingredients array that was passed in from the event listener
+          this.ingredients = ingredients;
+        }
+    );
   }
 
 }
