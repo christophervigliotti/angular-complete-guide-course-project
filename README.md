@@ -4,6 +4,10 @@
 
 ## Section 10: Course Project - Services & Dependency Injection
 
+### 123 Passing Ingredients from Recipes to the Shopping List (via a Service) 
+
+* (7 min) https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656246#overview 
+
 ### 122. Adding Ingredients to Recipes
 
 https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656244#overview
