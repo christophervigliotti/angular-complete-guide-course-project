@@ -10,6 +10,8 @@
 
 https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656242#overview
 
+this is a code change to the main branch
+
 ### 120. Adding the Shopping List Service
 
 https://www.udemy.com/course/the-complete-guide-to-angular-2/learn/lecture/6656240#overview 
