@@ -11,6 +11,8 @@ export class ShoppingListService {
     private ingredients: Ingredient[] = [
         new Ingredient('Apples',5),
         new Ingredient('Scrapple',10),    
+        new Ingredient('Snapple',6),    
+        new Ingredient('Crabapples',42)    
     ];
     
     // 120 added
