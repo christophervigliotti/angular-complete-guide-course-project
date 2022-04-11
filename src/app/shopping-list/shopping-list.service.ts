@@ -30,4 +30,22 @@ export class ShoppingListService {
         this.ingredientsChanged.emit(this.ingredients.slice()); 
     }
 
+    // 123 
+    addIngredients(
+        ingredients: Ingredient[]
+    ){
+        /* 
+        we could do it this way...the down-side is 
+        that we emit a lot of events
+
+        for(let ingredient of ingredients){
+            this.addIngredient(ingredient);
+        }
+
+        instead we directly add all ingredients in one go and then emit the event
+        */
+        this.ingredients.push(...ingredients); // the three dots is the "spread operator"
+        this.ingredientsChanged.emit(this.ingredients.slice());
+    }
+
 }
