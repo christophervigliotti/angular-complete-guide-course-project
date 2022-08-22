@@ -2,6 +2,12 @@
 
 *This is one of several repos that I created for the course ["Angular - The Complete Guide (2022 Edition)"](https://www.udemy.com/course/the-complete-guide-to-angular-2/).  For a complete list of repos created for this course: https://gist.github.com/christophervigliotti/92e5b3b93cbe9d630d8e9d81b7eb6636 .*
 
+## Section 12: Course Project - Routing
+
+### 156 Setting Up Routes
+
+NEXT
+
 ## Section 10: Course Project - Services & Dependency Injection
 
 ### 123 Passing Ingredients from Recipes to the Shopping List (via a Service) 
