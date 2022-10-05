@@ -4,10 +4,11 @@
 
 ## Section 12: Course Project - Routing
 
-### 157? Adding Navigation to the App
+### 158 Marking Active Routes
+```
 
-
-
+```
+### 157 Adding Navigation to the App
 ```
 goal
     to add navigation to the app
@@ -20,9 +21,7 @@ what changed
     header.component.ts
         removed eventEmitter code
 ```
-
 ### 156 Setting Up Routes
-
 ```
 goal
     implement routing
@@ -52,6 +51,8 @@ what changed?
 what's next?
     adding navigation to the app
 ```
+
+## RESUMING HERE AFTER TAKING THE SUMMER OFF
 
 ## Section 10: Course Project - Services & Dependency Injection
 
