@@ -14,7 +14,11 @@ goal
 
 what changed
 
-    tbd
+    header.component.html
+        modified "Recipes" and "Shopping List" links...removing all attributes
+        then adding in routerLink="/recipes" and routerLink="shopping-list"
+    header.component.ts
+        removed eventEmitter code
 ```
 
 ### 156 Setting Up Routes

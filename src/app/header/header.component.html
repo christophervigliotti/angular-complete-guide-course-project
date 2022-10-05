@@ -17,16 +17,30 @@
           
             <ul class="nav navbar-nav">
                 <li>
+                    <!-- 
+                    157, removing these attributes
+                    href="#" 
+                    (click)="onClickSectionLink('recipes')" 
+                    [ngStyle]="{'color':(getColor('recipes'))}"
+
+                    157, added "routerLink"...
+                    -->
                     <a 
-                        href="#" 
-                        (click)="onClickSectionLink('recipes')" 
-                        [ngStyle]="{'color':(getColor('recipes'))}"
+                        routerLink="/recipes"
                     >Recipes</a>
+
                 </li>
-                <li><a 
-                        href="#" 
-                        (click)="onClickSectionLink('shopping-list')" 
-                        [ngStyle]="{'color':(getColor('shopping-list'))}"
+                <li>
+                    <!-- 
+                    157, removing these attributes
+                    href="#" 
+                    (click)="onClickSectionLink('shopping-list')" 
+                    [ngStyle]="{'color':(getColor('shopping-list'))}"
+
+                    157, added "routerLink"...
+                    -->
+                    <a 
+                        routerLink="/shopping-list"
                     >Shopping List</a>
                 </li>
             </ul>
