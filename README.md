@@ -6,7 +6,11 @@
 
 ### 158 Marking Active Routes
 ```
+goal
+    to indicate (mark) the current active route
 
+what changed
+    tbd
 ```
 ### 157 Adding Navigation to the App
 ```
