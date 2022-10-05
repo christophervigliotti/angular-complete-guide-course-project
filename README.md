@@ -4,9 +4,48 @@
 
 ## Section 12: Course Project - Routing
 
+### 157? Adding Navigation to the App
+
+```
+goal
+    to add navigation to the app
+
+what changed
+
+    tbd
+```
+
 ### 156 Setting Up Routes
 
-NEXT
+```
+goal
+    implement routing
+
+what changed?
+
+    app-routing.module.ts
+        created file
+        defined class AppRoutingModule
+        imported and configured NgModule
+        imported Routes
+        registered (defined) three routes in constant "appRoutes" (of type "route")
+            the default route would not redirect until I added pathMatch and set it to 'full'
+                {
+                    path: '',
+                    redirectTo: '/recipes', 
+                    pathMatch: 'full'
+                }
+
+    app.component.html
+        replaced our "ngIf" trick (using <app-recipes> and <app-shopping-list> code blocks) with <router-outlet> tag
+
+    app.module.ts
+        imported AppRoutingModule so that we can define routes
+
+
+what's next?
+    adding navigation to the app
+```
 
 ## Section 10: Course Project - Services & Dependency Injection
 
