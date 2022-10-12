@@ -4,13 +4,22 @@
 
 ## Section 12: Course Project - Routing
 
+## 159 Fixing Page Reload Issues
+```
+    goal
+        to fix the page reload issues (naturally)
+    what changed 
+        tbd
+```
 ### 158 Marking Active Routes
 ```
 goal
     to indicate (mark) the current active route
 
 what changed
-    tbd
+    header.component.html 
+        <li routerLinkActive="active">
+            added directive 'router link active'...which will apply the specified css class (in this case 'active') when the related link is active
 ```
 ### 157 Adding Navigation to the App
 ```
