@@ -4,12 +4,23 @@
 
 ## Section 12: Course Project - Routing
 
-## 159 Fixing Page Reload Issues
+### 160 tbd
+```
+    goal
+        tbd
+    what  changed
+        tbd
+```
+### 159 Fixing Page Reload Issues
 ```
     goal
         to fix the page reload issues (naturally)
     what changed 
-        tbd
+        replaced code 
+            href="#"
+        with code 
+            style="cursor:pointer"
+        on several component views
 ```
 ### 158 Marking Active Routes
 ```
