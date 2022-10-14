@@ -4,15 +4,21 @@
 
 ## Section 12: Course Project - Routing
 
+### 162 Configuring Route Parameters 
+
 ### 161 Adding Child Routing Together
-created recipe-start component  
-    `ng g c recipes/recipe-start --spec false`  
-        --spec false threw an "unknown option" error   
-    tried again  
-        `ng g c recipes/recipe-start`  
-        works  
-        RecipeStartComponent added automatically to app.module.ts (nice)  
-added some text to recipe-start.component.html  
+
+#### created recipe-start component  
+`ng g c recipes/recipe-start --spec false`  
+    --spec false threw an "unknown option" error   
+tried again  
+    `ng g c recipes/recipe-start`  
+    works  
+    RecipeStartComponent added automatically to app.module.ts (nice) 
+
+#### added some text to recipe-start.component.html  
+
+#### app-routing.module.ts
 added a child route to 'recipes'  
 ```
 {
@@ -23,6 +29,16 @@ added a child route to 'recipes'
     ]
 },
 ```
+
+#### recipes.component.html
+removed app-recipe-detail and ng-template tags, replaced with `<router-outlet></router-outlet>`
+
+#### app-routing.module.ts
+added a second child route `{path: ':id', component: RecipeDetailComponent}`
+
+### end state
+links don't work, manually adding the id also doesn't work (both expected behaviors at the end of the lesson, to be addressed in next lesson)
+
 ### 160 Child Routes: Challenge
 no code changes
 

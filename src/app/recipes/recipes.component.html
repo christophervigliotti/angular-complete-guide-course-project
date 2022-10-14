@@ -5,12 +5,17 @@
         <!-- 119 removed from above: (recipeWasSelected)="selectedRecipe = $event" -->
     </div>
     <div class="col-md-7">
+        <!--
+        161 removed this...
         <app-recipe-detail
             *ngIf="selectedRecipe; else infoText" 
             [recipe]="selectedRecipe"
         ></app-recipe-detail>
         <ng-template #infoText>
             <p>Please select a recipe.</p>
-        </ng-template>
+        </ng-template> 
+        ...and replace it with           
+        -->        
+        <router-outlet></router-outlet>
     </div>
 </div>
