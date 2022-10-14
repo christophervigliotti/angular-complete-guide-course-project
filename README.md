@@ -5,15 +5,15 @@
 ## Section 12: Course Project - Routing
 
 ### 161 Adding Child Routing Together
-created recipe-start component
-    `ng g c recipes/recipe-start --spec false`
-        --spec false threw an "unknown option" error 
-    tried again 
-        `ng g c recipes/recipe-start`
-        works
-        RecipeStartComponent added automatically to app.module.ts (nice)
+created recipe-start component  
+    `ng g c recipes/recipe-start --spec false`  
+        --spec false threw an "unknown option" error   
+    tried again  
+        `ng g c recipes/recipe-start`  
+        works  
+        RecipeStartComponent added automatically to app.module.ts (nice)  
 added some text to recipe-start.component.html  
-added a child route to 'recipes'
+added a child route to 'recipes'  
 ```
 {
     path: 'recipes',
