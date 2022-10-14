@@ -1,9 +1,11 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 
+// 161 added children to recipes...
 const appRoutes: Routes = [
     {
         path: '',
@@ -12,7 +14,10 @@ const appRoutes: Routes = [
     },
     {
         path: 'recipes',
-        component: RecipesComponent
+        component: RecipesComponent,
+        children: [
+            {path: '', component: RecipeStartComponent}
+        ]
     },
     {
         path: 'shopping-list',

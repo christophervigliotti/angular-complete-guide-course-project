@@ -4,23 +4,38 @@
 
 ## Section 12: Course Project - Routing
 
-### 160 tbd
+### 161 Adding Child Routing Together
+created recipe-start component
+    `ng g c recipes/recipe-start --spec false`
+        --spec false threw an "unknown option" error 
+    tried again 
+        `ng g c recipes/recipe-start`
+        works
+        RecipeStartComponent added automatically to app.module.ts (nice)
+added some text to recipe-start.component.html  
+added a child route to 'recipes'
 ```
-    goal
-        tbd
-    what  changed
-        tbd
+{
+    path: 'recipes',
+    component: RecipesComponent,
+    children: [
+        {path: '', component: RecipeStartComponent}
+    ]
+},
 ```
+### 160 Child Routes: Challenge
+no code changes
+
 ### 159 Fixing Page Reload Issues
 ```
-    goal
-        to fix the page reload issues (naturally)
-    what changed 
-        replaced code 
-            href="#"
-        with code 
-            style="cursor:pointer"
-        on several component views
+goal
+    to fix the page reload issues (naturally)
+what changed 
+    replaced code 
+        href="#"
+    with code 
+        style="cursor:pointer"
+    on several component views
 ```
 ### 158 Marking Active Routes
 ```
